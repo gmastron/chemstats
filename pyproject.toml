@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chemstats"
+version = "0.1.0"
+description = "Calibration curve analysis for analytical chemistry"
+authors = [
+  {name="G.M."}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "scipy"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

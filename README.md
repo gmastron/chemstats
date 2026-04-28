@@ -1,0 +1,1 @@
+A python tool to evaluate the errors in analytical chemistry
