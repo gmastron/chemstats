@@ -122,8 +122,8 @@ class ExternalStandard:
         max_y = np.max(self.std_value)
 
         if self.y0 < min_y or self.y0 > max_y:
-        print(f"WARNING: y0 = {self.y0:.6f} is out of calibration range "
-          f"({min_y:.6f} - {max_y:.6f})")
+            print(f"WARNING: y0 = {self.y0:.6f} is out of calibration range "
+              f"({min_y:.6f} - {max_y:.6f})")
         
         self.sx0_value, self.x0 = self.sx0(
             self.syx,
