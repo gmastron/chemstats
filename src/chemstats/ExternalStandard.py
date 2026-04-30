@@ -81,7 +81,7 @@ class ExternalStandard:
         return self.m, self.q, self.r2
 
     def calc_syx(self):
-        y_hat = self.m * self.std_conc
+        y_hat = self.m * self.std_conc + self.q
         self.n = len(self.std_conc)
 
         self.syx = np.sqrt(
