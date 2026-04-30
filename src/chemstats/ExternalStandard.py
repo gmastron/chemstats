@@ -117,6 +117,10 @@ class ExternalStandard:
         plt.show()
 
     def interpolate(self):
+        
+        assert np.min(self.std_value) <= self.y0 <= np.max(self.std_value), \
+        f"y0 Out of Range range: {self.y0} (range {np.min(self.std_value)} - {np.max(self.std_value)})"
+        
         self.sx0_value, self.x0 = self.sx0(
             self.syx,
             self.m,
