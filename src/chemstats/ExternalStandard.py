@@ -95,7 +95,7 @@ class ExternalStandard:
             self.m, self.q, self.std_conc
         )
 
-        plt.figure(figsize=(7, 7))
+        plt.figure(figsize=(5, 5))
         plt.plot(x_line, y_line, '--', label="Regression line")
         plt.plot(self.std_conc, self.std_value, 'o', label="Standards")
 
