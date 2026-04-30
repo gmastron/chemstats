@@ -118,8 +118,12 @@ class ExternalStandard:
 
     def interpolate(self):
         
-        assert np.min(self.std_value) <= self.y0 <= np.max(self.std_value), \
-        f"y0 Out of Range range: {self.y0} (range {np.min(self.std_value)} - {np.max(self.std_value)})"
+        min_y = np.min(self.std_value)
+        max_y = np.max(self.std_value)
+
+        if self.y0 < min_y or self.y0 > max_y:
+        print(f"WARNING: y0 = {self.y0:.6f} is out of calibration range "
+          f"({min_y:.6f} - {max_y:.6f})")
         
         self.sx0_value, self.x0 = self.sx0(
             self.syx,
